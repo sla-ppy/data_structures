@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits>
 
-#include "lists.h"
+#include "linked_list/lists.h"
 
 int main() {
     char menuChoice{};

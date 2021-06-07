@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "lists.h"
-#include "util.h"
+#include "../util.h"
 
 void singleLinkedList() {
     struct Node {
