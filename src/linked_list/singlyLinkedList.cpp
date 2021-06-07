@@ -3,7 +3,7 @@
 #include "lists.h"
 #include "../util.h"
 
-void singleLinkedList() {
+void singlyLinkedList() {
     struct Node {
         // each node has a value, and the nextPtr which points at the next value
         int value{0};

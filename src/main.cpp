@@ -9,20 +9,25 @@ int main() {
     bool isInMenu{true};
 
     while (isInMenu) {
-        std::cout << "1. Single Linked List" << std::endl;
-        std::cout << "2. Stuff" << std::endl;
+        std::cout << "1. Singly Linked List" << std::endl;
+        std::cout << "2. Doubly Linked List" << std::endl;
+        std::cout << "3. Circular Singly Linked List" << std::endl;
         std::cout << '\n';
-        std::cout << "3. Exit" << std::endl;
+        std::cout << "4. Exit" << std::endl;
 
         std::cin >> menuChoice;
+        std::cout << '\n';
 
         if (menuChoice == '1') {
-            singleLinkedList();
+            singlyLinkedList();
         }
         else if (menuChoice == '2') {
-            // stuff
+            doublyLinkedList();
         }
         else if (menuChoice == '3') {
+            circularSinglyLinkedList();
+        }
+        else if (menuChoice == '4') {
             isInMenu = false;
         }
         else {
