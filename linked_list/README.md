@@ -2,15 +2,15 @@
   <summary> Types Of Linked List: </summary>
   
 ## Singly Linked List:
-![alt text](https://github.com/sla-ppy/data_structures/blob/master/src/linked_list/img/singly_linked_list.png?raw=true)
+![alt text](https://github.com/sla-ppy/data_structures/blob/master/linked_list/img/singly_linked_list.png?raw=true)
 <br>
 
 ## Doubly Linked List:
-![alt text](https://github.com/sla-ppy/data_structures/blob/master/src/linked_list/img/doubly_linked_list.png?raw=true)
+![alt text](https://github.com/sla-ppy/data_structures/blob/master/linked_list/img/doubly_linked_list.png?raw=true)
 <br>
 
 ## Circular Singly Linked List:
-![alt text](https://github.com/sla-ppy/data_structures/blob/master/src/linked_list/img/circlular_singly_linked_list.png?raw=true)
+![alt text](https://github.com/sla-ppy/data_structures/blob/master/linked_list/img/circlular_singly_linked_list.png?raw=true)
 <br>
 <br>
 
