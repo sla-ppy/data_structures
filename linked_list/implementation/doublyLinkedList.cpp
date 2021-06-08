@@ -51,11 +51,17 @@ void doublyLinkedList() {
         n = n->nextPtr;
     }
 
-    std::cout << '\n';
-
     // deallocate nodes
     delete head;
     delete second;
     delete third;
+    delete fourth;
+    delete fifth;
+    delete n;
+
+    // simple "screen clear"
+    for (int i = 0; i < 11; ++i) {
+        std::cout << '\n';
+    }
 }
 

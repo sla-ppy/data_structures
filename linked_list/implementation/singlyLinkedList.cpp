@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "lists.h"
-#include "../../src/util.h"
 
 struct LinkedList {
     int data;
@@ -52,8 +51,12 @@ void singlyLinkedList() {
         p = p->next;
     }
 
-    std::cout << '\n';
+    delete head;
+    delete p;
 
-    toContinue();
+    // simple "screen clear"
+    for (int i = 0; i < 13; ++i) {
+        std::cout << '\n';
+    }
 }
 

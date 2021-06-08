@@ -10,10 +10,12 @@ void circularSinglyLinkedList() {
         Node *nextPtr{nullptr};
     };
 
+    // allocate nodes
     Node *head = new Node;
     Node *second = new Node;
     Node *third = new Node;
 
+    // assign values to nodes
     head->value = 1;
     head->nextPtr = second;
 
@@ -26,6 +28,7 @@ void circularSinglyLinkedList() {
 
     int itCounter{0};
 
+    // loop through the nodes displaying them
     Node *n = head;
     while (n != nullptr) {
         itCounter++;
@@ -37,5 +40,16 @@ void circularSinglyLinkedList() {
         if (itCounter == 15) {
             n = nullptr;
         }
+    }
+
+    // deallocate nodes
+    delete head;
+    delete second;
+    delete third;
+    delete n;
+
+    // simple "screen clear"
+    for (int i = 0; i < 11; ++i) {
+        std::cout << '\n';
     }
 }

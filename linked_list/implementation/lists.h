@@ -7,4 +7,7 @@ void doublyLinkedList();
 
 void circularSinglyLinkedList();
 
+// practice
+void linkedListPractice();
+
 #endif // LISTS_H
