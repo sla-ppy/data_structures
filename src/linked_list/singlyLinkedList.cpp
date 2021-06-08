@@ -3,58 +3,57 @@
 #include "lists.h"
 #include "../util.h"
 
+struct LinkedList{
+    int data;
+    struct LinkedList *next; // self-referencing pointer!
+};
+
+typedef struct LinkedList *node; // define node as pointer of data type struct LinkedList
+
+node createNode() {
+    node temp; // declare node
+    temp = (node)malloc(sizeof(struct LinkedList)); // allocate memory using malloc()
+    temp->next = nullptr; // make next point to null
+
+    return temp;
+}
+
+node addNode(node head, int value) {
+    node temp, p; // declare two nodes temp and p
+    temp = createNode(); // createNode() will return a new node with data = value and next pointing to NULL
+    temp->data = value; // add element's value to data part of node
+
+    if (head == nullptr) {
+        head = temp; // when linked list is empty
+    }
+    else {
+        p = head; // assign head to p
+        while (p->next != nullptr) {
+            p = p->next; //traverse the list until p is the last node. the last node always points to null
+        }
+        p->next = temp; // point the previous last node to the new node created
+    }
+    return head;
+}
+
 void singlyLinkedList() {
-    struct Node {
-        // each node has a value, and the nextPtr which points at the next value
-        int value{0};
-        Node *nextPtr{};
-    };
 
-    // declare and allocate the nodes on heap
-    Node *head = new Node;
-    Node *second = new Node;
-    Node *third = new Node;
+    node head = new LinkedList();
 
+    addNode(head, 1);
+    addNode(head, 2);
+    addNode(head, 3);
 
-    // define 1st - 5th nodes
-    head->value = 1;
-    head->nextPtr = second;
-
-    second->value = 2;
-    second->nextPtr = third;
-
-    third->value = 3;
-    // last node is called the "tail", its ALWAYS a good idea to point the last item on the list to the nullptr
-    third->nextPtr = nullptr;
-
-
-    Node* p = head;
-    // loop until we hit the tail
+    node p;
+    p = head;
     while (p != nullptr) {
-        if (p == head) {
-            std::cout << "Value: " << p->value << "    ";
-            std::cout << "Address: " << p->nextPtr << "    <--- HEAD";
-            std::cout << '\n';
-        }
-        else if (p->nextPtr == nullptr) {
-            std::cout << "Value: " << p->value << "    ";
-            std::cout << "Address: " << p->nextPtr << "                 <--- TAIL";
-            std::cout << '\n';
-        }
-        else {
-            std::cout << "Value: " << p->value << "    ";
-            std::cout << "Address: " << p->nextPtr;
-            std::cout << '\n';
-        }
-
-        p = p->nextPtr;
+        std::cout << p->data << "  ";
+        std::cout << p->next << "  ";
+        std::cout << "\n";
+        p = p->next;
     }
 
-
-    // deallocate nodes
-    delete head;
-    delete second;
-    delete third;
+    std::cout << '\n';
 
     toContinue();
 }
