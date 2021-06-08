@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits>
 
-#include "linked_list/lists.h"
+#include "../linked_list/src/lists.h"
 
 int main() {
     char menuChoice{};
@@ -20,17 +20,13 @@ int main() {
 
         if (menuChoice == '1') {
             singlyLinkedList();
-        }
-        else if (menuChoice == '2') {
+        } else if (menuChoice == '2') {
             doublyLinkedList();
-        }
-        else if (menuChoice == '3') {
+        } else if (menuChoice == '3') {
             circularSinglyLinkedList();
-        }
-        else if (menuChoice == '4') {
+        } else if (menuChoice == '4') {
             isInMenu = false;
-        }
-        else {
+        } else {
             std::cout << " Please choose a correct option from above." << std::endl;
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
